@@ -1,0 +1,43 @@
+{
+    "laser": {
+        "type": "laser",
+        "timerKey": "laserTimer",
+        "cooldownKey": "laserCooldown",
+        "duration": 540,
+        "autoCooldown": 20,
+        "burstOffsets": [
+            12,
+            -12
+        ],
+        "projectileSpeed": 10,
+        "projectileLife": 120,
+        "hitBonus": 30,
+        "sound": {
+            "freq": 1240,
+            "dur": 0.04,
+            "oscillator": "square",
+            "volume": 0.025
+        }
+    },
+    "missile": {
+        "type": "missile",
+        "timerKey": "missileTimer",
+        "cooldownKey": "missileCooldown",
+        "duration": 620,
+        "autoCooldown": 42,
+        "burstOffsets": [
+            16,
+            -16
+        ],
+        "projectileSpeed": 5.2,
+        "projectileLife": 190,
+        "hitBonus": 60,
+        "turnRate": 0.09,
+        "sound": {
+            "freq": 620,
+            "dur": 0.08,
+            "oscillator": "sawtooth",
+            "volume": 0.03
+        }
+    }
+}

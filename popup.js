@@ -1,0 +1,1 @@
+document.getElementById('play').onclick=()=>chrome.tabs.create({url:chrome.runtime.getURL('game.html')});

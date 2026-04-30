@@ -1,0 +1,113 @@
+{
+    "crystal": {
+        "type": "crystal",
+        "fill": [
+            "#d8fbff",
+            "#67b4ff"
+        ],
+        "frame": "#dfffff",
+        "shine": "rgba(255,255,255,0.72)",
+        "deco": "rgba(160,231,255,0.36)",
+        "icon": "diamond",
+        "ability": {
+            "onDestroy": "spawnScoreDrop"
+        }
+    },
+    "ember": {
+        "type": "ember",
+        "fill": [
+            "#ffd08f",
+            "#ff6d4d"
+        ],
+        "frame": "#ffe1be",
+        "shine": "rgba(255,236,197,0.72)",
+        "deco": "rgba(255,135,72,0.30)",
+        "icon": "flame",
+        "ability": {
+            "onDestroy": "meteorBurst"
+        }
+    },
+    "nebula": {
+        "type": "nebula",
+        "fill": [
+            "#edd0ff",
+            "#7f7bff"
+        ],
+        "frame": "#f3dbff",
+        "shine": "rgba(255,255,255,0.60)",
+        "deco": "rgba(191,145,255,0.28)",
+        "icon": "star",
+        "ability": {
+            "onHit": "warpBall"
+        }
+    },
+    "smile": {
+        "type": "smile",
+        "fill": [
+            "#fff1a6",
+            "#ffb848"
+        ],
+        "frame": "#fff6cc",
+        "shine": "rgba(255,255,255,0.62)",
+        "deco": "rgba(255,202,113,0.26)",
+        "icon": "smile",
+        "ability": {
+            "onDestroy": "spawnLifeDrop"
+        }
+    },
+    "crown": {
+        "type": "crown",
+        "fill": [
+            "#d6ffb0",
+            "#56c977"
+        ],
+        "frame": "#ecffd4",
+        "shine": "rgba(255,255,255,0.66)",
+        "deco": "rgba(143,244,184,0.28)",
+        "icon": "crown",
+        "ability": {
+            "onHit": "crownCommand"
+        }
+    },
+    "core": {
+        "type": "core",
+        "fill": [
+            "#cfd8ff",
+            "#4f68ff"
+        ],
+        "frame": "#e2e8ff",
+        "shine": "rgba(255,255,255,0.68)",
+        "deco": "rgba(120,138,255,0.30)",
+        "icon": "core",
+        "ability": {
+            "onHit": "corePulse",
+            "onDestroy": "weaponBurst"
+        },
+        "armor": 1,
+        "tags": [
+            "fortified"
+        ]
+    },
+    "boss": {
+        "type": "boss",
+        "fill": [
+            "#ffe6f5",
+            "#ff5fb8"
+        ],
+        "frame": "#fff3fa",
+        "shine": "rgba(255,255,255,0.82)",
+        "deco": "rgba(255,120,190,0.35)",
+        "icon": "boss",
+        "hp": 14,
+        "armor": 2,
+        "tags": [
+            "boss",
+            "fortified"
+        ],
+        "renderStyle": "boss",
+        "ability": {
+            "onHit": "bossCommand",
+            "onDestroy": "bossCollapse"
+        }
+    }
+}

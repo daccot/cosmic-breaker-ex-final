@@ -1,0 +1,413 @@
+[
+    {
+        "id": 1,
+        "code": "frost-rift",
+        "name": {
+            "ja": "フロスト・リフト",
+            "en": "Frost Rift"
+        },
+        "description": {
+            "ja": "ハート型の結晶配置が混ざる氷ステージ",
+            "en": "An icy stage with playful crystal heart layouts."
+        },
+        "theme": {
+            "primary": "#8ef7ff",
+            "secondary": "#2f84ff"
+        },
+        "layout": {
+            "rows": 8,
+            "cols": 14,
+            "gap": 8,
+            "side": 70,
+            "top": 96,
+            "eliteRuleOffset": 1,
+            "pattern": [
+                "....CC..CC....",
+                "...CCCCCCCC...",
+                "..CCCCCCCCCC..",
+                ".CCCCCCCCCCCC.",
+                ".CCCCCCCCCCCC.",
+                "..CCCCCCCCCC..",
+                "...CCCCCCCC...",
+                ".....CCCC....."
+            ],
+            "charMap": {
+                "C": "crystal"
+            },
+            "blockHeight": 17
+        },
+        "gimmicks": [
+            {
+                "id": "crystal-resonance",
+                "label": "Crystal Resonance",
+                "effects": [
+                    {
+                        "kind": "pushWarning",
+                        "text": "Cryo shells resonate with plasma and nova.",
+                        "severity": "info"
+                    },
+                    {
+                        "kind": "modifyDropRate",
+                        "amount": 0.05
+                    },
+                    {
+                        "kind": "shiftThemeHue",
+                        "amount": -8
+                    },
+                    {
+                        "kind": "setBlockResistance",
+                        "label": "Cryo Shell",
+                        "traits": [
+                            "plasma",
+                            "nova"
+                        ],
+                        "damageScale": 0.5,
+                        "rows": [
+                            0,
+                            2,
+                            4
+                        ],
+                        "modulo": 4,
+                        "equals": 1,
+                        "color": "#bfeaff"
+                    },
+                    {
+                        "kind": "applyTraitModifier",
+                        "trait": "plasma",
+                        "scoreBonus": 6,
+                        "damageScale": 1.15
+                    },
+                    {
+                        "kind": "enableHostilePattern",
+                        "id": "frost-meteor",
+                        "label": "Frost Meteors",
+                        "patternType": "meteor",
+                        "cooldown": 290,
+                        "severity": "warn"
+                    },
+                    {
+                        "kind": "setAudioTheme",
+                        "themeKey": "frost"
+                    },
+                    {
+                        "kind": "enableHostilePattern",
+                        "id": "frost-mines",
+                        "label": "Frost Mines",
+                        "patternType": "minefield",
+                        "cooldown": 380,
+                        "severity": "info"
+                    }
+                ]
+            }
+        ],
+        "audioTheme": "frost"
+    },
+    {
+        "id": 2,
+        "code": "inferno-spark",
+        "name": {
+            "ja": "インフェルノ・スパーク",
+            "en": "Inferno Spark"
+        },
+        "description": {
+            "ja": "尾を引く火球を連想させる炎ステージ",
+            "en": "A fire stage shaped like a blazing comet."
+        },
+        "theme": {
+            "primary": "#ffb370",
+            "secondary": "#ff5d5d"
+        },
+        "layout": {
+            "rows": 8,
+            "cols": 14,
+            "gap": 8,
+            "side": 70,
+            "top": 96,
+            "eliteRuleOffset": 2,
+            "pattern": [
+                ".....EE.......",
+                "....EEEE......",
+                "...EEEEEE.....",
+                "..EEEEEEEEE...",
+                ".EEEEEEEEEEEE.",
+                "..EEEEEEE.....",
+                "....EEEE......",
+                "......EE......"
+            ],
+            "charMap": {
+                "E": "ember"
+            },
+            "blockHeight": 17
+        },
+        "gimmicks": [
+            {
+                "id": "ember-furnace",
+                "label": "Ember Furnace",
+                "effects": [
+                    {
+                        "kind": "pushWarning",
+                        "text": "Missile turrets ignite periodically.",
+                        "severity": "warn"
+                    },
+                    {
+                        "kind": "modifyBallSpeed",
+                        "multiplier": 1.04
+                    },
+                    {
+                        "kind": "shiftThemeHue",
+                        "amount": 12
+                    },
+                    {
+                        "kind": "enableAutoWeapon",
+                        "weapon": "missile",
+                        "cooldownScale": 1.25
+                    },
+                    {
+                        "kind": "applyDropBias",
+                        "drop": "fast",
+                        "weightDelta": 5
+                    },
+                    {
+                        "kind": "setBlockResistance",
+                        "label": "Heat Armor",
+                        "traits": [
+                            "heavy",
+                            "ghost"
+                        ],
+                        "damageScale": 0.6,
+                        "rows": [
+                            1,
+                            4,
+                            6
+                        ],
+                        "modulo": 3,
+                        "equals": 0,
+                        "color": "#ffbf7d"
+                    },
+                    {
+                        "kind": "enableHostilePattern",
+                        "id": "ember-sweeper",
+                        "label": "Sweeper Beams",
+                        "patternType": "sweeper",
+                        "cooldown": 240,
+                        "severity": "danger"
+                    },
+                    {
+                        "kind": "setAudioTheme",
+                        "themeKey": "inferno"
+                    }
+                ]
+            }
+        ],
+        "audioTheme": "inferno"
+    },
+    {
+        "id": 3,
+        "code": "nebula-drive",
+        "name": {
+            "ja": "ネビュラ・ドライブ",
+            "en": "Nebula Drive"
+        },
+        "description": {
+            "ja": "笑顔っぽい配置が混ざる遊び心のある宇宙ステージ",
+            "en": "A playful nebula stage with a smiley constellation."
+        },
+        "theme": {
+            "primary": "#d6a8ff",
+            "secondary": "#6f8fff"
+        },
+        "layout": {
+            "rows": 8,
+            "cols": 14,
+            "gap": 8,
+            "side": 70,
+            "top": 96,
+            "eliteRuleOffset": 0,
+            "pattern": [
+                "..NN......NN..",
+                "..NN......NN..",
+                "..............",
+                "..............",
+                "..N........N..",
+                "...NNNNNNNN...",
+                "....NNNNNN....",
+                "......NN......"
+            ],
+            "charMap": {
+                "N": "smile"
+            },
+            "blockHeight": 17
+        },
+        "gimmicks": [
+            {
+                "id": "nebula-vacuum",
+                "label": "Nebula Vacuum",
+                "effects": [
+                    {
+                        "kind": "pushWarning",
+                        "text": "Gravity pulses bend trajectories.",
+                        "severity": "warn"
+                    },
+                    {
+                        "kind": "modifyDropRate",
+                        "amount": 0.08
+                    },
+                    {
+                        "kind": "modifyMagnetRange",
+                        "amount": 80
+                    },
+                    {
+                        "kind": "applyDropBias",
+                        "drop": "magnet",
+                        "weightDelta": 6
+                    },
+                    {
+                        "kind": "applyTraitModifier",
+                        "trait": "ghost",
+                        "pierceBonus": 0.18,
+                        "damageScale": 1.1
+                    },
+                    {
+                        "kind": "enableHostilePattern",
+                        "id": "nebula-gravity",
+                        "label": "Gravity Pulse",
+                        "patternType": "gravityPulse",
+                        "cooldown": 180,
+                        "severity": "warn"
+                    },
+                    {
+                        "kind": "setAudioTheme",
+                        "themeKey": "nebula"
+                    },
+                    {
+                        "kind": "enableHostilePattern",
+                        "id": "nebula-ring",
+                        "label": "Nova Ring",
+                        "patternType": "pulseRing",
+                        "cooldown": 235,
+                        "severity": "warn"
+                    }
+                ]
+            }
+        ],
+        "audioTheme": "nebula"
+    },
+    {
+        "id": 4,
+        "code": "core-nexus",
+        "name": {
+            "ja": "コア・ネクサス",
+            "en": "Core Nexus"
+        },
+        "description": {
+            "ja": "王冠のような配置で締めるボス前ステージ",
+            "en": "A crown-like final setup before the core nexus."
+        },
+        "theme": {
+            "primary": "#b5ffcf",
+            "secondary": "#62c8ff"
+        },
+        "layout": {
+            "rows": 8,
+            "cols": 14,
+            "gap": 8,
+            "side": 70,
+            "top": 96,
+            "eliteRuleOffset": 1,
+            "pattern": [
+                ".K..K..K..K...",
+                "KKKKKKKKKKKK..",
+                "..KK..KK..KK..",
+                "..KKKBBBKKKK..",
+                "....KBBBBK....",
+                "....KBBBBK....",
+                ".....CCCC.....",
+                "......CC......"
+            ],
+            "charMap": {
+                "K": "crown",
+                "C": "core",
+                "B": "boss"
+            },
+            "blockHeight": 18
+        },
+        "gimmicks": [
+            {
+                "id": "nexus-arsenal",
+                "label": "Nexus Arsenal",
+                "effects": [
+                    {
+                        "kind": "pushWarning",
+                        "text": "Laser emplacements and meteor volleys are active.",
+                        "severity": "danger"
+                    },
+                    {
+                        "kind": "shiftThemeHue",
+                        "amount": 20
+                    },
+                    {
+                        "kind": "enableAutoWeapon",
+                        "weapon": "laser",
+                        "cooldownScale": 1.15
+                    },
+                    {
+                        "kind": "applyDropBias",
+                        "drop": "laser",
+                        "weightDelta": 5
+                    },
+                    {
+                        "kind": "applyDropBias",
+                        "drop": "missile",
+                        "weightDelta": 4
+                    },
+                    {
+                        "kind": "setBlockResistance",
+                        "label": "Core Guard",
+                        "traits": [
+                            "normal",
+                            "heavy"
+                        ],
+                        "damageScale": 0.55,
+                        "rows": [
+                            0,
+                            1,
+                            3,
+                            6
+                        ],
+                        "modulo": 2,
+                        "equals": 0,
+                        "color": "#d7fff0"
+                    },
+                    {
+                        "kind": "applyTraitModifier",
+                        "trait": "nova",
+                        "scoreBonus": 12,
+                        "pierceBonus": 0.08,
+                        "damageScale": 1.2
+                    },
+                    {
+                        "kind": "enableHostilePattern",
+                        "id": "nexus-meteor",
+                        "label": "Meteor Volley",
+                        "patternType": "meteor",
+                        "cooldown": 160,
+                        "severity": "danger"
+                    },
+                    {
+                        "kind": "setAudioTheme",
+                        "themeKey": "nexus"
+                    },
+                    {
+                        "kind": "enableHostilePattern",
+                        "id": "nexus-ring",
+                        "label": "Core Pulse",
+                        "patternType": "pulseRing",
+                        "cooldown": 210,
+                        "severity": "danger"
+                    }
+                ]
+            }
+        ],
+        "audioTheme": "nexus"
+    }
+]
